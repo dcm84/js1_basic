@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 4.1</title>
+<script>
+/*
+- Создайте пустой объект book1
+- Добавьте объекту свойства: title, pubYear и price с произвольными значениями
+- Создайте объект book2 и установите свойства title, pubYear и price с произвольными значениями
+- Выведите свойства объектов в цикле
+*/
+
+let book1 = {}
+
+book1.title = "title";
+book1.pubYear = 2020;
+book1.price = 1000;
+
+let book2 = {
+    title: "title2",
+    pubYear: 2021,
+    price: 500
+}
+
+for (k in book1) {
+    console.log(`${k}: ${book1[k]}`);
+}
+
+for (k in book2) {
+    console.log(`${k}: ${book2[k]}`);
+}
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

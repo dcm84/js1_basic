@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 3.5</title>
+<script>
+
+function printNumbers(num, cols) {
+    let result = '';
+    let rows = Math.ceil(num / cols);
+    for (row = 0; row < rows; row++) {
+        let rowNumbers = [];
+        for (col = 0; col < cols; col++) {
+            next = row + col * rows;
+            if(next <= num)
+                rowNumbers.push(next);
+        }
+        result += rowNumbers.join("\t") + "\n";
+    }
+    
+    console.log(result);
+}
+
+printNumbers(18, 7)
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

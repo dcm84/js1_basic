@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 4.4</title>
+<script>
+/*
+В классе '5Б' учится 10 учеников, из которых 6 девочек и 4 мальчика.
+Задача:
+- обеспечить целостность хранения данных;
+- заполнить данные всех учеников класса;
+- вывести в консоли отдельно список мальчиков и список девочек;
+- сортировкой по фамилиям учеников пренебречь;
+- само собой, в школе не один класс;
+- предусмотрите возможность добавления дополнительных сведений ученику, таких как: увлечения спортом, дата рождения и т.д.
+*/
+
+let students = [
+    {
+        name: 'Аня К.',
+        gender: "female",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Маша Б.',
+        gender: "female",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Оля С.',
+        gender: "female",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Таня О.',
+        gender: "female",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Катя А.',
+        gender: "female",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Юля М.',
+        gender: "female",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Никита А.',
+        gender: "male",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Рома Б.',
+        gender: "male",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Петя В',
+        gender: "male",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },
+    {
+        name: 'Костя Н.',
+        gender: "male",
+        birthday: '01.01.1999',
+        grade: "5Б"
+    },               
+    {
+        name: 'Костя Н.',
+        gender: "male",
+        birthday: '01.01.1999',
+        grade: "5Ф"
+    },   
+]
+
+function getStudentListByGender(grade, gender="female") {
+    studentList = [];
+    for (let i in students) {
+        if (students[i].grade == grade && students[i].gender == gender) {
+            studentList.push(students[i].name)
+        }
+    }
+    return studentList
+}
+console.log("Девочки");
+console.log(getStudentListByGender("5Б", "female"));
+console.log("Мальчики");
+console.log(getStudentListByGender("5Б", "male"));
+
+
+/*
+'Аня К.'
+'Маша Б.'
+'Оля С.'
+'Таня О.'
+'Катя А.'
+'Юля М.'
+
+'Никита А.'
+'Рома Б.'
+'Петя В.'
+'Костя Н.'
+*/
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

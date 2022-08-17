@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 5.4</title>
+<script>
+/*
+Вывести на экран количество дней оставшихся до Нового года
+*/
+
+let currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+
+let newYearDate = new Date(currentYear+1, 1, 1, 0, 0, 0);
+
+let daysLeft = Math.floor((newYearDate.getTime() - currentDate.getTime()) / (1000 * 60* 60 * 24));
+
+console.log(`До нового года осталось ${daysLeft} дней`);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

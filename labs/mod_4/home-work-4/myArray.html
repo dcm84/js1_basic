@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>myArray</title>
+<script>
+/*
+Описать функцию myArray, которая заполняет массив заданными символами. 
+Первым параметром функция принимает символ, которым заполняется массив, а вторым - сколько элементов должно быть в массиве. 
+Пример: myArray('x', 4) создаст массив ['x', 'x', 'x', 'x'] 
+*/
+
+function myArray(symbol, count) {
+    let result = []
+    for (let i = 0; i < count; i++ ) {
+        result.push(symbol);
+    }
+    
+    return result;
+}
+
+console.log(myArray('x', 4));
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

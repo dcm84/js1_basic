@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 2.5</title>
+<script>
+/*
+Считаем ворон на ветке
+Создайте переменную crow и присвойте ей целочисленное значение
+Скрипт должен вернуть количество ворон на ветке с правильным окончанием. Например:
+- На ветке сидит 2 вороны
+- На ветке сидит 11 ворон
+*/
+
+let crow;
+let crowEnding = "";
+
+for (crow = 1; crow <= 35; crow++) {
+    units = crow % 10;
+    tens = (crow % 100 - units) / 10
+    
+    crowEnding = "";
+    if (tens != 1) {
+        if (units == 1) {
+            crowEnding = "а";
+        }
+        else if (units > 1 && units < 5) {
+            crowEnding = "ы";
+        }
+    } 
+
+    //выводим ворон
+    document.write(`На ветке сидит ${crow} ворон${crowEnding}<br/>`)
+}
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

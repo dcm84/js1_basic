@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 6.3</title>
+<script>
+/*
+- Исходные данные
+	var s = 'Мы знаем, что монохромный цвет - это градации серого';
+	var txt = 'хром';
+	var word;
+- В значении переменной s найдите слово, содержащее подстроку, которая является значением переменной txt и присвойте его переменной word
+*/
+
+var s = 'Мы знаем, что монохромный цвет - это градации серого';
+var txt = 'хром';
+var word;
+
+//очень уродливо, надо проверять разные символы, запятые и пр.
+var baseIndex = s.indexOf(txt);
+if(baseIndex != -1) {
+	var beginIndex = s.lastIndexOf(' ', baseIndex) + 1;
+	if (beginIndex == -1) beginIndex = 0;
+	var endIndex = s.indexOf(' ', baseIndex);
+	if (endIndex == -1) endIndex = s.length;
+	console.log(s.substring(beginIndex, endIndex));
+}
+else console.log("Вхождений нет");
+
+//по-мужски
+let exp = new RegExp(`([А-Яа-яЁё]*${txt}[А-Яа-яЁё]*)`, "i");
+let res = s.match(exp);
+console.log(res != null ? res[1] : "Вхождений нет");
+
+</script>
+</head>
+
+<body>
+
+
+
+</body>
+</html>

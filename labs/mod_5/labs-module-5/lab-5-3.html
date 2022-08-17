@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 5.3</title>
+<script>
+/*
+Вывести на экран текущую дату в формате '28 февраля 2018 года'
+*/
+
+let date = new Date();
+
+//не будем изобратать велосипеды со всякими .getMonth() и пр..
+let formatter = new Intl.DateTimeFormat("ru", {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+});
+
+console.log(formatter.format(date)); 
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

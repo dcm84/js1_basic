@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Практическая работа - создание таблицы</title>
+<style>
+*	{
+	margin: 0;
+	padding: 0;}
+
+table {
+	border-collapse: collapse;
+	margin: auto;}
+
+td	{
+	border: 2px solid #090;
+	padding: 5px;
+	text-align: center;}
+
+.red {
+	background: #fcc;}
+</style>
+<script>
+
+/* 
+Создайте таблицу размером: m строк и n ячеек в каждой строке.
+Добавьте в ячейку ее порядковый номер, т.е. значение переменной count.
+Раскрасьте третий столбец таблицы в красный цвет, т.е. добавьте атрибут class='red' ячейкам третьего столбца.
+<table>
+<tr>
+	<td>1</td>
+	<td>2</td>
+	<td class='red'>3</td>
+</tr>
+<tr>
+	<td>4</td>
+	<td>5</td>
+	<td class='red'>6</td>
+</tr>
+</table> 
+*/
+
+var m = 11, n = 7, count = 0;
+
+var table = '<table>';
+
+// первый цикл создает строки
+for (row = 1; row <= m; row++) {
+	table += "<tr>"
+	
+	// второй цикл создает и наполняет ячейки
+	for (coll = 1; coll <= n; coll++) {
+		count++;
+		table += `<td${coll == 3 ? " class='red'" : ""}>${count}</td>`
+	}
+
+	table += "</tr>"
+}
+table += '</table>';
+
+/* 
+В итоге переменная table должна содержать в себе весь HTML-код таблицы, примерно так:
+<table><tr><td>1</td><td>2</td><td class='red'>3</td></tr><tr><td>4</td><td>5</td><td class='red'>6</td></tr></table>  
+*/
+
+document.write(table);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

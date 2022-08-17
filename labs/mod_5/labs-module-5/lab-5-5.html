@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 5.5</title>
+<script>
+/*
+- Написать программу, определяющую время работы цикла
+
+- for (var i = 0; i < 100000; i++) {
+	var res = i * i * i;
+}
+*/
+
+t1 = new Date()
+
+for (var i = 0; i < 100000; i++) {
+	var res = i * i * i;
+}
+
+t2 = new Date();
+console.log(`Время работы цикла ${t2.getTime() - t1.getTime()} миллисекунд`);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

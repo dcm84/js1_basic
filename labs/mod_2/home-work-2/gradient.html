@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Градиент</title>
+<style>
+*	{
+	margin: 0; 
+	padding: 0;
+	}
+	
+div	{
+	height: 1px;
+	}
+</style>
+<script>
+/* Выведите на экран вертикальный линейный градиент, который плавно (за 256 шагов) переходит из красного rgb(255,0,0) в белый rgb(255,255,255). Использовать цикл for.
+
+document.write('<div style="background: rgb(255,0,0);"></div>');
+document.write('<div style="background: rgb(255,1,1);"></div>');
+...
+document.write('<div style="background: rgb(255,255,255);"></div>'); */
+
+for (let i = 0; i < 256; i++) {
+	document.write(`<div style="background: rgb(255,${i},${i});"></div>`);
+}
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Домашняя работа - 4</title>
+<script>
+/*
+Создайте функцию filterRange(arr, a, b), которая принимает массив чисел arr и возвращает новый массив, 
+который содержит только числа из массива arr из диапазона от a до b. 
+То есть, проверка имеет вид a ≤ arr[ i ] ≤ b. Функция не должна менять исходный массив arr.
+*/
+
+var arr = [ 1, 5, 4, 3, 8, 0, 4 ];
+
+function filterRange(arr, a, b){
+    let newArr = [];
+    for (i of arr) {
+        if (a <= i && i <= b) {
+            newArr.push(i);
+        }
+    }
+    return newArr;
+}
+
+var filtered = filterRange( arr, 3, 5 );
+
+console.log(filtered);
+console.log(arr);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 3.4</title>
+<script>
+/* Напишите функцию showTables( ), которая рисует таблицу вида: dog dog dog cat cat dog dog dog cat cat dog dog …
+Последовательность: три собаки, два кота. Число зверей в строке: 6. Число строк произвольное. Разделителем является символ табуляции \t
+Вывод осуществить в консоль */
+
+function showTables(lines = 6) {
+    let animalOrder = ["dog", "dog", "dog", "cat", "cat"];
+    let animalPerLine = 6;
+    let counter = 0;
+    let currentAnimals;
+    for (line = 0; line < lines; line++) {
+        currentAnimals = []
+        for (i = 0; i < animalPerLine; i++){
+            currentAnimals.push(animalOrder[counter % animalOrder.length]);
+            counter++;
+        }
+        console.log(currentAnimals.join("\t"));
+    }
+}
+
+showTables(15)
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

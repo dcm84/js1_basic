@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Лабораторная работа - 5.2</title>
+<script>
+/*
+- Создайте класс Book со свойствами:
+	title
+	pubYear
+	price
+- Создайте экземпляры класса book1 и book2 со свойствами: title, pubYear и price с произвольными значениями
+- Опишите для класса Book метод showBook(), который выводит:
+	название;
+	год издания;
+	цену книги
+- Вызовите метод showBook() у обоих экземпляров класса Book
+*/
+
+class Book {
+	constructor (title, pubYear, price) {
+		this.title = title;
+		this.pubYear = pubYear;
+		this.price = price;
+	}
+
+	showBook() {
+		console.log(this.title, this.pubYear, this.price);
+	}
+}
+
+b1 = new Book("title1", 2021, 500);
+b2 = new Book("title2", 2022, 600);
+
+b1.showBook();
+b2.showBook();
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
